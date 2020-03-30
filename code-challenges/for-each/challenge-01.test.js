@@ -37,7 +37,7 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  for( let i = 0; i< times; i++) {
+  for( let i = times; i >0; i--) {
     callback(arr,num);
   }
   return arr;
@@ -55,7 +55,9 @@ Then, write a function named removeElements that takes in an array and a callbac
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 const removeOne = (num, arr) => {
-  if (num % 3 === 2) arr.pop();
+  if (num % 3 === 2) {
+    arr.pop();
+  }
 };
 
 const removeElements = (arr, callback) => {
@@ -72,10 +74,11 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-	arr.forEach((number) => callback(number, arr));
-	
-	return arr;
-
+  arr.forEach((value) => {
+    callback(value, arr);
+  });
+  return arr;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -87,7 +90,10 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  // Solution code here...
+  arr.forEach((element, idx, arr) => {
+    removeOne(element, arr);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,7 +114,15 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let newArr = [];
+  availableItems.forEach(function (element) {
+    console.log(availableItems);
+    if(element.available === true){
+      newArr.push(element.name);
+    }
+  });
+  return  newArr;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,9 +139,9 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
-  // Solution code here...
-};
+// const fizzbuzz = (arr) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
