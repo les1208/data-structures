@@ -7,9 +7,10 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
-  finalExam: true
+  finalExam: true,
 };
 
 const getCourseKeys = (obj) => {
@@ -28,49 +29,51 @@ let characters = [
     name: 'Eddard',
     spouse: 'Catelyn',
     children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark'
+    house: 'Stark',
   },
   {
     name: 'Jon A.',
     spouse: 'Lysa',
     children: ['Robin'],
-    house: 'Arryn'
+    house: 'Arryn',
   },
   {
     name: 'Cersei',
     spouse: 'Robert',
     children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister'
+    house: 'Lannister',
   },
   {
     name: 'Daenarys',
     spouse: 'Khal Drogo',
     children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen'
+    house: 'Targaryen',
   },
   {
     name: 'Mace',
     spouse: 'Alerie',
     children: ['Margaery', 'Loras'],
-    house: 'Tyrell'
+    house: 'Tyrell',
   },
   {
     name: 'Euron',
     spouse: null,
     children: [],
-    house: 'Greyjoy'
+    house: 'Greyjoy',
   },
   {
     name: 'Jon S.',
     spouse: null,
     children: [],
-    house: 'Snow'
-  }
+    house: 'Snow',
+  },
 ];
 
 const getHouses = (arr) => {
   let houses = [];
-  characters.forEach(person => person.push(person.house));
+  Object.values(arr).forEach(person => {
+    houses.push(person.house);
+  });
   return houses;
 };
 
@@ -87,7 +90,15 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  let children = 0;
+
+  Object.values(arr).forEach(person => {
+    if (person.name === character) {
+      children = person.children.length > 0 ? true : false;
+    }
+
+  });
+  return children;
 
 };
 
@@ -100,7 +111,16 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let children = 0;
+
+  Object.entries(arr).forEach(item => {
+    item.forEach(person => {
+      if (person.name === character) {
+        children = person.children.length > 0 ? true : false;
+      }
+    });
+  });
+  return children;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -110,7 +130,7 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  //Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
