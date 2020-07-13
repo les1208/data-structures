@@ -1,0 +1,9 @@
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\bin\Debug\netcoreapp3.1\LinkedListLibrary.deps.json
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\bin\Debug\netcoreapp3.1\LinkedListLibrary.dll
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\bin\Debug\netcoreapp3.1\LinkedListLibrary.pdb
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.csprojAssemblyReference.cache
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.AssemblyInfoInputs.cache
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.AssemblyInfo.cs
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.dll
+C:\Users\Les\source\repos\data-structures\c-sharp\Data-Structures\LinkedListLibrary\obj\Debug\netcoreapp3.1\LinkedListLibrary.pdb
