@@ -78,5 +78,69 @@ namespace LLLibrary
 
             return sb.ToString();
         }
+
+        public void Append(int value)
+        {      //Create node
+            Node node = new Node(value);
+            //add to the end 
+            Current = Head;
+            if(Head == null)
+            {
+                Head = node;
+            }
+            else
+            {
+                while (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+
+                Current.Next = node;
+                //Current = Current.Next;
+            }
+        }
+
+        public void InsertBefore(int value, int newValue)
+        {
+            Current = Head;
+
+            if (Current.Value == value)
+            {
+                Insert(newValue);
+                Current = Current.Next;
+            }
+
+            while (Current.Next != null)
+            {
+                if (Current.Next.Value == value)
+                {
+                    Node node = new Node(newValue);
+
+                    node.Next = Current.Next;
+                    Current.Next = node;
+                    Current = Current.Next;
+                }
+
+                Current = Current.Next;
+            }
+        }
+
+        public void InsertAfter(int value, int newValue)
+        {
+            while (Current != null)
+            {
+                if(Current.Value == value)
+                {
+                    Node node = new Node(newValue);
+                    node.Next = Current.Next;
+                    Current.Next = node;
+
+                    Current = Current.Next;
+                }
+
+                Current = Current.Next;
+            }
+            
+        }
     }
 }
