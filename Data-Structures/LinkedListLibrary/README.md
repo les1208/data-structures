@@ -1,5 +1,4 @@
-# Data Structure Implementation README
----
+
 
 ## Linked List
 
